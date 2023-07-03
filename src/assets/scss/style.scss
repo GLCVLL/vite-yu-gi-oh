@@ -1,8 +1,38 @@
-body{
-    background-image: aqua;
+header{
+    background-color: #b71b1b;
+    height: 100px;
+    border-bottom: 1px solid grey;
+}
+
+footer{
+    background-color: #b71b1b;
+    height: 100px;
+    border-top: 1px solid grey;
+}
+
+main{
+    background-color: #b71b1b;
+    height: calc(100vh - 200px);
 }
 
 .card-container{
     height: 200px;
-    background-color: green;
+    background-color: white;
 }
+
+.big-circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: blue;
+    border: 2px solid white;
+}
+
+span{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+    border: 2px solid white;
+}
+
