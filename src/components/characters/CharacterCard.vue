@@ -7,17 +7,12 @@ export default {
         type: String,
         color: String,
     },
-    computed: {
-        cardColor() {
-            return this.color;
-        }
-    }
 };
 </script>
 
 <template>
-    <div class="my-card text-center my-3" :class="cardColor">
-        <img :src="image" :alt="name" class="img-fluid rounded-circle">
+    <div class="my-card text-center my-3">
+        <img :src="image" :alt="name" class="img-fluid rounded-circle my-2">
         <div>{{ number }}</div>
         <h4>{{ name }}</h4>
         <p><em>{{ type }}</em></p>
@@ -33,17 +28,7 @@ img {
 .my-card {
     height: 200px;
     width: 200px;
-}
-
-.my-card.red {
-    background-color: red;
-}
-
-.my-card.green {
-    background-color: green;
-}
-
-.my-card.blue {
-    background-color: skyblue;
+    background-color: aquamarine;
+    border-radius: 20px;
 }
 </style>

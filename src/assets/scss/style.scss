@@ -12,11 +12,11 @@ footer{
 
 main{
     background-color: #b71b1b;
-    height: 100vh;
+    height: calc(100vh - 200px);
 }
 
 .card-container{
-    height: 100&;
+    height: 400px;
     background-color: white;
     border-radius: 20px;
     overflow-x: hidden;

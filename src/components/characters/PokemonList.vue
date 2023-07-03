@@ -20,7 +20,7 @@ export default {
 </script>
 
 <template>
-    <div class="row g-3 row-cols-2 row-cols-ned-3 row-cols-lg-5">
+    <div class="row m-3 bg-secondary row-cols-2 row-cols-ned-3 row-cols-lg-5">
         <div class=" col d-flex justify-content-center" v-for="character in characters" :key="character.id">
             <CharacterCard :name="character.name" :image="character.imageUrl" :number="character.number"
                 :type="character.type1" :color="character.color" />
