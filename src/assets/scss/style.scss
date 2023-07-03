@@ -12,13 +12,14 @@ footer{
 
 main{
     background-color: #b71b1b;
-    height: calc(100vh - 200px);
+    height: 100vh;
 }
 
 .card-container{
-    height: 400px;
+    height: 100&;
     background-color: white;
     border-radius: 20px;
+    overflow-x: hidden;
 }
 
 .big-circle{

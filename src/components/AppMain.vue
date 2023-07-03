@@ -1,5 +1,5 @@
 <script>
-import PokemonList from './PokemonList.vue'
+import PokemonList from './characters/PokemonList.vue';
 export default {
     components: { PokemonList },
 };
@@ -9,7 +9,7 @@ export default {
     <main>
         <div class="container">
             <!-- cerchi -->
-            <div class="circles d-flex align-items-center py-3">
+            <div class="circles d-flex align-items-center py-3 mb-3">
                 <div class="big-circle">
                 </div>
                 <div class="small-circles d-flex px-2">
