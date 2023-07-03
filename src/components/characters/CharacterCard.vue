@@ -25,6 +25,10 @@ img {
     width: 100px;
 }
 
+h4 {
+    font-size: 16px;
+}
+
 .my-card {
     height: 200px;
     width: 200px;
