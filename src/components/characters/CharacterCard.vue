@@ -1,17 +1,22 @@
 <script>
+import { colorMap } from '../../data/index';
 export default {
     props: {
         name: String,
         image: String,
         number: Number,
         type: String,
-        color: String,
     },
+    computed: {
+        bgColor() {
+            return colorMap[this.type];
+        }
+    }
 };
 </script>
 
 <template>
-    <div class="my-card text-center my-3">
+    <div class="my-card text-center my-3" :style="`background-color: ${bgColor}`">
         <img :src="image" :alt="name" class="img-fluid rounded-circle my-2">
         <div>{{ number }}</div>
         <h4>{{ name }}</h4>
@@ -32,7 +37,6 @@ h4 {
 .my-card {
     height: 200px;
     width: 200px;
-    background-color: aquamarine;
     border-radius: 20px;
 }
 </style>
