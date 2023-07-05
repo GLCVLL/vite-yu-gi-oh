@@ -1,3 +1,4 @@
+const apiUri = 'https://41tyokboji.execute-api.eu-central-1.amazonaws.com/dev/api/v1/pokemons';
 const colorMap = {
     "Bug" : '#f8d5a3',
     "Dark": '#044286',
@@ -19,4 +20,4 @@ const colorMap = {
     "Water": '#DEF3FD',
 }
 
-export {colorMap};
+export {apiUri, colorMap};

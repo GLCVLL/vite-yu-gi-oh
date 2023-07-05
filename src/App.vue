@@ -1,19 +1,35 @@
 <script>
 import axios from 'axios';
-const endpoint = 'https://41tyokboji.execute-api.eu-central-1.amazonaws.com/dev/api/v1/pokemons';
+import { apiUri } from './data';
 import AppMain from './components/AppMain.vue';
+import SearchForm from './components/searchForm.vue';
 import { store } from './data/store.js';
 export default {
-  components: { AppMain },
+  components: { AppMain, SearchForm },
+  data() {
+    return {
+      typeFilter: '',
+    }
+  },
+  methods: {
+    fetchCharacters(endpoint = apiUri) {
+      axios.get(endpoint).then(res => {
+        store.characters = res.data.docs;
+      })
+    },
+    searchTypes() {
+      const endpoint = `${endpoint}?eq${this.typeFilter}`;
+    }
+  },
   created() {
-    axios.get(endpoint).then(res => {
-      store.characters = res.data.docs
-    })
-  }
+    this.fetchCharacters();
+  },
 };
 </script>
 <template>
-  <header></header>
+  <header>
+    <SearchForm @change="searchTypes" />
+  </header>
   <AppMain />
   <footer></footer>
 </template>
